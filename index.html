@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lemonade</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+
+        #click-text {
+            font-size: 50px;
+            color: white;
+            font-family: 'Rock Salt', sans-serif;
+            cursor: pointer;
+            transition: color 0.1s ease-in-out;
+        }
+
+        video {
+            display: none;
+            width: 1562px;
+            height: 1080px;
+            object-fit: cover;
+        }
+
+        .overlay {
+            display: none; /* hide */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #D8D8D8;
+            font-family: 'Nunito', sans-serif;
+            text-align: center;
+            transition: opacity 0.5s ease-in;
+            opacity: 0
+        }
+
+        img.profile {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .username, .handle, .telegram {
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .username {
+            color: #D8D8D8;
+            font-size: 30px;
+            font-weight: 500;
+            word-wrap: break-word;
+        }
+        .username:hover {
+            color: #9C9C9C;
+        }
+        .handle, .telegram {
+            color: #787878;
+            font-size: 20px;
+            font-weight: 500;
+            word-wrap: break-word;
+            margin-top: 0;
+        }
+        .handle:hover, .telegram:hover {
+            color: #454545;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="click-text">click</div>
+
+    <video id="video" loop>
+        <source src="Illuminate.mp4" type="video/mp4">
+        video tag is not supported
+    </video>
+
+    <div class="overlay" id="overlay">
+        <img class="profile" src="https://images-ext-1.discordapp.net/external/d_BDZa5bE7aFCFt6kno7rJRgwvUmlBsUqNQD6gSaJU0/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/1250093055457886209/9f58c34eddc21c5b74ee53e09afa77e4.png?format=webp&quality=lossless" alt="Profile Picture" />
+        <a href="https://discord.com/users/1250093055457886209" class="username" target="_blank">James</a>
+        <a href="https://discord.com/users/1250093055457886209" class="handle" target="_blank">@burnthacitydown</a>
+        <a href="https://t.me/slashest" class="telegram" target="_blank">t.me/slashest</a>
+    </div>
+
+    <script>
+        function startFlicker() {
+            const textElement = document.getElementById('click-text');
+            const flicker = () => {
+                const randomTime = Math.random() * (3 - 1.2) + 1.2;
+                textElement.style.color = '#D3D3D3';
+                setTimeout(() => {
+                    textElement.style.color = 'white';
+                    setTimeout(flicker, randomTime * 1000);
+                }, 100);
+            };
+            flicker();
+        }
+
+        window.onload = function() {
+            startFlicker();
+        };
+
+        document.body.addEventListener('click', function() {
+            const video = document.getElementById('video');
+            const clickText = document.getElementById('click-text');
+            const overlay = document.getElementById('overlay');
+            
+            clickText.style.display = 'none';
+            video.style.display = 'block';
+            
+            video.play();
+
+            setTimeout(() => {
+                overlay.style.display = 'flex';
+                overlay.style.opacity = '1';
+            }, 500); // delay
+        });
+    </script>
+</body>
+</html>
