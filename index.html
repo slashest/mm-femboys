@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lemonade</title>
+    <title>Twizzy</title>
+    <link rel="icon" type="image/png" href="https://e.snmc.io/i/300/s/6810e8d10d6a0fc63d3fe73c935eb8da/9325720/TwizzyRich%2C%20Label%20logo.jpeg" />
     <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap" rel="stylesheet">
     <style>
@@ -24,17 +25,23 @@
             font-family: 'Rock Salt', sans-serif;
             cursor: pointer;
             transition: color 0.1s ease-in-out;
+            z-index: 2;
+            position: absolute;
         }
 
         video {
             display: none;
-            width: 1562px;
-            height: 1080px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
+            z-index: 1;
         }
 
         .overlay {
-            display: none; /* hide */
+            display: none;
             position: absolute;
             top: 0;
             left: 0;
@@ -48,7 +55,8 @@
             font-family: 'Nunito', sans-serif;
             text-align: center;
             transition: opacity 0.5s ease-in;
-            opacity: 0
+            opacity: 0;
+            z-index: 2;
         }
 
         img.profile {
@@ -81,19 +89,35 @@
         .handle:hover, .telegram:hover {
             color: #454545;
         }
+
+        @media (max-width: 768px) {
+            #click-text {
+                font-size: 30px;
+            }
+            img.profile {
+                width: 150px;
+                height: 150px;
+            }
+            .username {
+                font-size: 24px;
+            }
+            .handle, .telegram {
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 <body>
 
     <div id="click-text">click</div>
 
-    <video id="video" loop>
+    <video id="video" loop preload="auto">
         <source src="Flytroop.mp4" type="video/mp4">
-        video tag is not supported
+        Your browser does not support the video tag.
     </video>
 
     <div class="overlay" id="overlay">
-        <img class="profile" src="https://images-ext-1.discordapp.net/external/Nror8p18cLu50e7rTKG3aPx2a1Dm-_68RPGXO9OAJDM/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/1250093055457886209/620881c3e4c1fd3c247e6f422fef9ec8.png?format=webp&quality=lossless" alt="Profile Picture" />
+        <img class="profile" src="https://images-ext-1.discordapp.net/external/7GvftbconD1Zh9iWzvJ6IlfxR1n6TS235xGzpw2bA04/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/1250093055457886209/475b5266c716cf6b0c0502790a8670b6.png?format=webp&quality=lossless" alt="Profile Picture" />
         <a href="https://discord.com/users/1250093055457886209" class="username" target="_blank">James</a>
         <a href="https://discord.com/users/1250093055457886209" class="handle" target="_blank">@burnthacitydown</a>
         <a href="https://t.me/slashest" class="telegram" target="_blank">t.me/slashest</a>
@@ -125,6 +149,8 @@
             clickText.style.display = 'none';
             video.style.display = 'block';
             
+            // Enable sound and play video
+            video.muted = false;
             video.play();
 
             setTimeout(() => {
