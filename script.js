@@ -95,8 +95,52 @@ $(document).ready(function () {
       artist: "Yeat",
       oga: "https://files.catbox.moe/ifx0a1.ogg",
       poster: "https://i.scdn.co/image/ab67616d0000b2738bec48cd14271058a813467d"
+    },
+    {
+      title: "Talking 2 A Ghost",
+      artist: "OsamaSon",
+      oga: "https://files.catbox.moe/l6cnol.ogg",
+      poster: "https://m.media-amazon.com/images/I/61zNhn0nPqL._UF1000,1000_QL80_.jpg"
+    },
+    {
+      title: "grinning",
+      artist: "saturn, oaf1",
+      oga: "https://files.catbox.moe/7um107.ogg",
+      poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLT9LTxHLtJau1g96Zh1hDD04klYjdEnVNDQ&s"
+    },
+    {
+      title: "bad idea",
+      artist: "quinn, blackwinterwells",
+      oga: "https://files.catbox.moe/k6hjn0.ogg",
+      poster: "https://i.scdn.co/image/ab67616d0000b27387b13926650da1b8d92401f1"
+    },
+    {
+      title: "Enter The Dragon",
+      artist: "Lancey Foux, BNYX®",
+      oga: "https://files.catbox.moe/21jp90.ogg",
+      poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUfHMMF8wN_TVhLxTDk_nQChiUJ0_p9Lyf7A&s"
+    },
+    {
+      title: "PRETTIEST ONE",
+      artist: "Destroy Lonely",
+      oga: "https://files.catbox.moe/ay0d3o.ogg",
+      poster: "https://i.scdn.co/image/ab67616d0000b273dca2deff544636f1ad1d9d96"
+    },
+    {
+      title: "1093",
+      artist: "Yeat",
+      oga: "https://files.catbox.moe/2fa3zl.ogg",
+      poster: "https://i.scdn.co/image/ab67616d0000b2739567b80f50a5b9f0178ae993"
     }
   ];
+
+  function preloadNextTrack(index) {
+    var nextIndex = (index + 1) % playlist.length;
+    var audio = new Audio(playlist[nextIndex].oga);
+    audio.preload = "auto";
+    var img = new Image();
+    img.src = playlist[nextIndex].poster;
+  }
 
   function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -123,6 +167,9 @@ $(document).ready(function () {
     },
     ended: function () {
       myPlaylist.next();
+    },
+    play: function (event) {
+      preloadNextTrack(myPlaylist.current);
     }
   };
 
