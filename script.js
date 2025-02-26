@@ -32,7 +32,7 @@ $(document).ready(function () {
     },
     {
       title: "Vetement Jeans",
-      artist: "Playboi Carti, Lil Uzi Vert",
+      artist: "Lil Uzi Vert, Playboi Carti",
       oga: "https://files.catbox.moe/lh765z.ogg",
       poster: "https://t2.genius.com/unsafe/425x425/https%3A%2F%2Fimages.genius.com%2F08d02b33fed7781693145cd10b16828a.862x862x1.png"
     },
@@ -131,6 +131,30 @@ $(document).ready(function () {
       artist: "Yeat",
       oga: "https://files.catbox.moe/2fa3zl.ogg",
       poster: "https://i.scdn.co/image/ab67616d0000b2739567b80f50a5b9f0178ae993"
+    },
+    {
+      title: "Night Time",
+      artist: "Yeat",
+      oga: "https://files.catbox.moe/lbrsnr.ogg",
+      poster: "https://i.scdn.co/image/ab67616d0000b273f273a7856ab03525740ccee9"
+    },
+    {
+      title: "1st Thing 1st",
+      artist: "Yeat",
+      oga: "https://files.catbox.moe/4q9rva.ogg",
+      poster: "https://i.scdn.co/image/ab67616d0000b273f273a7856ab03525740ccee9"
+    },
+    {
+      title: "AMIRI TRENDSETTER",
+      artist: "Rich Amiri, OsamaSon",
+      oga: "https://files.catbox.moe/sk3zrt.ogg",
+      poster: "https://i.scdn.co/image/ab67616d0000b273e20e203e532ab60a61b38fec"
+    },
+    {
+      title: "Not the same",
+      artist: "Yeat",
+      oga: "https://files.catbox.moe/wlnr6o.ogg",
+      poster: "https://i1.sndcdn.com/artworks-hz9qcXdxJ2l56Z8S-UJF6Ig-t500x500.jpg"
     }
   ];
 
