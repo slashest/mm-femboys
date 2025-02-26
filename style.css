@@ -1,0 +1,234 @@
+/* Global styles */
+* , *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  background: #eee url("https://files.catbox.moe/8gr4gf.png") no-repeat center;
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.music-player {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  margin: 1px auto;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  background: #222;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.music-player img {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  bottom: -5px;
+  right: -5px;
+  z-index: -1;
+  display: block;
+  width: calc(100% + 10px) !important;
+  height: calc(100% + 10px) !important;
+  object-fit: cover;
+  filter: blur(2px);
+}
+
+.music-player .info {
+  width: 100%;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  position: relative;
+  padding-top: 10px;
+}
+
+.music-player .info .profile-info {
+  font-size: 14px;
+  font-weight: lighter;
+  margin-top: 30px;
+}
+
+.music-player .info .profile-info span {
+  font-size: 12px;
+  display: block;
+  font-weight: light;
+  margin-top: 5px;
+}
+
+.music-player .info .jp-playlist li {
+  display: none;
+}
+
+.music-player .info .jp-playlist li a {
+  font-size: 18px;
+  font-weight: 300;
+  text-decoration: none;
+  color: rgba(225, 225, 225, 0.4);
+}
+
+.music-player .info .jp-playlist li a span {
+  font-size: 14px;
+  display: block;
+  margin-top: 10px;
+}
+
+.music-player .info .jp-playlist li.jp-playlist-current {
+  display: block;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+}
+
+.music-player .info .jp-playlist li.jp-playlist-current a {
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.music-player .info .jp-playlist li.jp-playlist-current a span {
+  font-size: 16px;
+}
+
+.music-player .progress, 
+.music-player .volume-level {
+  width: 100%;
+  height: 5px;
+  display: block;
+  background: #000;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+  border: none;
+  z-index: 1;
+}
+
+.music-player .progress .ui-slider-range,
+.music-player .volume-level .ui-slider-range {
+  display: block;
+  background: #ed553b;
+  height: 5px;
+  border-radius: 0;
+}
+
+.music-player .progress .ui-slider-handle,
+.music-player .volume-level .ui-slider-handle {
+  position: absolute;
+  top: -8px;
+  width: 8px;
+  height: 22px;
+  background: url("//i.imgur.com/tsqwz1N.png") no-repeat center;
+  border: none;
+  outline: none;
+  margin: 0 0 0 -3px;
+  cursor: pointer;
+}
+
+.music-player .controls {
+  text-align: center;
+  width: 100%;
+  height: 190px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.music-player .controls .current {
+  font-size: 48px;
+  color: rgba(225, 225, 225, 0.4);
+  padding: 15px 0 20px;
+}
+
+.music-player .controls .play-controls a {
+  display: inline-block;
+  width: 35px;
+  height: 40px;
+  margin: 0 30px;
+}
+
+.music-player .controls .volume-level {
+  position: relative;
+  bottom: auto;
+  width: 200px;
+  height: 2px;
+  margin: 30px auto 0;
+  background: rgba(225, 225, 225, 0.3);
+}
+
+.music-player .controls .volume-level .ui-slider-range {
+  height: 2px;
+}
+
+.music-player .controls .volume-level .ui-slider-handle {
+  top: -8px;
+  margin-left: -9px;
+  width: 22px;
+  height: 22px;
+  background-image: url("//i.imgur.com/V5i67V2.png");
+}
+
+.music-player .controls .volume-level .icon-volume-up, 
+.music-player .controls .volume-level .icon-volume-down {
+  position: absolute;
+  right: -34px;
+  top: -8px;
+  width: 22px;
+}
+
+.music-player .controls .volume-level .icon-volume-down {
+  right: auto;
+  left: -27px;
+}
+
+[class^="icon-"] {
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  opacity: 0.5;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+[class^="icon-"]:hover {
+  opacity: 0.80;
+  transform: scale(1.1);
+}
+
+.icon-previous {
+  background-image: url("https://files.catbox.moe/b0n6in.png");
+  transform: rotateY(180deg);
+}
+
+.icon-previous:hover {
+  transform: rotateY(180deg) scale(1.1);
+}
+
+.icon-play {
+  background-image: url("https://files.catbox.moe/4b3grk.png");
+}
+
+.icon-pause {
+  background-image: url("https://files.catbox.moe/l15z5j.png");
+}
+
+.icon-next {
+  background-image: url("https://files.catbox.moe/b0n6in.png");
+}
+
+.icon-volume-up {
+  background-image: url("https://files.catbox.moe/6junip.png");
+  width: 22px;
+  height: 22px;
+}
+
+.icon-volume-down {
+  background-image: url("https://files.catbox.moe/3egezb.png");
+  width: 25px;
+  height: 25px;
+}
