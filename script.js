@@ -4,7 +4,7 @@ $(document).ready(function () {
       title: "goyard",
       artist: "Nettspend",
       oga: "https://files.catbox.moe/7wgef3.ogg",
-      poster: "https://media.discordapp.net/attachments/1272005855788798065/1343981644150866045/14faf1ff-d118-440c-abf8-ff5818aaee6a.png?ex=67bf3ff1&is=67bdee71&hm=ae9465bcce7175656df3e7fc4bf8e104c6716eb1d12d527fcb9c616f1f2072e7&=&width=647&height=671"
+      poster: "https://files.catbox.moe/k0atg7.png"
     },
     {
       title: "BACK THËN",
