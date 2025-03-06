@@ -155,6 +155,24 @@ $(document).ready(function () {
       artist: "Yeat",
       oga: "https://files.catbox.moe/wlnr6o.ogg",
       poster: "https://i1.sndcdn.com/artworks-hz9qcXdxJ2l56Z8S-UJF6Ig-t500x500.jpg"
+    },
+    {
+      title: "Free Agents",
+      artist: "Homixide Gang",
+      oga: "https://files.catbox.moe/slfbwr.ogg",
+      poster: "https://files.catbox.moe/qh5xs2.png"
+    },
+    {
+      title: "Moshpit Fukit",
+      artist: "Yeat",
+      oga: "https://files.catbox.moe/9hvtdr.ogg",
+      poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbB9qdv98gjgTKjcR5vgEgWeqzQ5Bz-UG0rQ&s"
+    },
+    {
+      title: "Can’t See In",
+      artist: "Yeat",
+      oga: "https://files.catbox.moe/i82p57.ogg",
+      poster: "https://files.catbox.moe/v8jrc2.png"
     }
   ];
 
