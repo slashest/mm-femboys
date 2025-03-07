@@ -173,6 +173,18 @@ $(document).ready(function () {
       artist: "Yeat",
       oga: "https://files.catbox.moe/i82p57.ogg",
       poster: "https://files.catbox.moe/v8jrc2.png"
+    },
+    {
+      title: "Snowed It",
+      artist: "Ken Carson, Destroy Lonely",
+      oga: "https://files.catbox.moe/bcl8bt.ogg",
+      poster: "https://pbs.twimg.com/media/Fjf6EqcWQAAsYy1.jpg"
+    },
+    {
+      title: "For You",
+      artist: "Ken Carson",
+      oga: "https://files.catbox.moe/h43ovr.ogg",
+      poster: "https://i1.sndcdn.com/artworks-tI7JTsxh0VFDyp71-YGJFgQ-t500x500.jpg"
     }
   ];
 
