@@ -197,6 +197,24 @@ $(document).ready(function () {
       artist: "Ken Carson",
       oga: "https://files.catbox.moe/l6xlke.ogg",
       poster: "https://i1.sndcdn.com/artworks-NUx3wqNsA9aEFy2I-zSRYWg-t500x500.png"
+    },
+    {
+      title: "MUNYUN",
+      artist: "Playboi Carti",
+      oga: "https://files.catbox.moe/9vakuw.ogg",
+      poster: "https://upload.wikimedia.org/wikipedia/commons/7/7b/I_Am_Music_by_Playboi_Carti.jpg"
+    },
+    {
+      title: "PHILLY",
+      artist: "Playboi Carti, Travis Scott",
+      oga: "https://files.catbox.moe/estzu9.ogg",
+      poster: "https://upload.wikimedia.org/wikipedia/commons/7/7b/I_Am_Music_by_Playboi_Carti.jpg"
+    },
+    {
+      title: "OLYMPIAN",
+      artist: "Playboi Carti, Travis Scott",
+      oga: "https://files.catbox.moe/wr2u9z.ogg",
+      poster: "https://upload.wikimedia.org/wikipedia/commons/7/7b/I_Am_Music_by_Playboi_Carti.jpg"
     }
   ];
 
