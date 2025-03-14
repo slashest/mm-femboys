@@ -212,7 +212,7 @@ $(document).ready(function () {
     },
     {
       title: "OLYMPIAN",
-      artist: "Playboi Carti, Travis Scott",
+      artist: "Playboi Carti",
       oga: "https://files.catbox.moe/wr2u9z.ogg",
       poster: "https://upload.wikimedia.org/wikipedia/commons/7/7b/I_Am_Music_by_Playboi_Carti.jpg"
     }
