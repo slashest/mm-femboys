@@ -67,10 +67,10 @@ $(document).ready(function () {
       poster: "https://i.scdn.co/image/ab67616d0000b2738fd4ee592690d0a94caa0045"
     },
     {
-      title: "UR THE MOON",
+      title: "DIFFERENT DAY",
       artist: "Playboi Carti",
       oga: "https://files.catbox.moe/8gepnm.ogg",
-      poster: "https://i.scdn.co/image/ab67616d0000b27312b97cf843c0dfd62b10254f"
+      poster: "https://upload.wikimedia.org/wikipedia/commons/7/7b/I_Am_Music_by_Playboi_Carti.jpg"
     },
     {
       title: "TURNMEUP",
@@ -215,6 +215,18 @@ $(document).ready(function () {
       artist: "Playboi Carti",
       oga: "https://files.catbox.moe/wr2u9z.ogg",
       poster: "https://upload.wikimedia.org/wikipedia/commons/7/7b/I_Am_Music_by_Playboi_Carti.jpg"
+    },
+    {
+      title: "Jim Carrey",
+      artist: "Destroy Lonely",
+      oga: "https://files.catbox.moe/69jfcu.ogg",
+      poster: "https://images.genius.com/301f1fe0f2c3dadfcc2bfc00b44e48fd.1000x1000x1.png"
+    },
+    {
+      title: "Type monëy",
+      artist: "Yeat",
+      oga: "https://files.catbox.moe/l4ulz8.ogg",
+      poster: "https://bloximages.chicago2.vip.townnews.com/utdailybeacon.com/content/tncms/assets/v3/editorial/f/ca/fca728c8-b6c4-11ed-9240-f7ae4dfc550c/63fce9e7b201d.image.jpg"
     }
   ];
 
