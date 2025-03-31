@@ -187,7 +187,7 @@ $(document).ready(function () {
       poster: "https://i1.sndcdn.com/artworks-tI7JTsxh0VFDyp71-YGJFgQ-t500x500.jpg"
     },
     {
-      title: "Tryna get down",
+      title: "U Kan Do It Too",
       artist: "Playboi Carti",
       oga: "https://files.catbox.moe/nv3o9q.ogg",
       poster: "https://i1.sndcdn.com/artworks-k5TKfiCS3zYqoOWH-IKVxUw-t500x500.jpg"
@@ -227,6 +227,18 @@ $(document).ready(function () {
       artist: "Yeat",
       oga: "https://files.catbox.moe/l4ulz8.ogg",
       poster: "https://bloximages.chicago2.vip.townnews.com/utdailybeacon.com/content/tncms/assets/v3/editorial/f/ca/fca728c8-b6c4-11ed-9240-f7ae4dfc550c/63fce9e7b201d.image.jpg"
+    },
+    {
+      title: "5 Star Raver",
+      artist: "Destroy Lonely",
+      oga: "https://files.catbox.moe/9pb6y9.ogg",
+      poster: "https://t2.genius.com/unsafe/425x425/https%3A%2F%2Fimages.genius.com%2F9b6bd7273381f3dd9c08b690fd98fe6a.486x486x1.png"
+    },
+    {
+      title: "Nightcore OG",
+      artist: "Ken Carson",
+      oga: "https://files.catbox.moe/iadj4c.ogg",
+      poster: "https://upload.wikimedia.org/wikipedia/en/f/f5/Ken_Carson_-_A_Great_Chaos.jpg"
     }
   ];
 
