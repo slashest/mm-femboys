@@ -217,6 +217,12 @@ $(document).ready(function () {
       poster: "https://upload.wikimedia.org/wikipedia/commons/7/7b/I_Am_Music_by_Playboi_Carti.jpg"
     },
     {
+      title: "FOMDJ",
+      artist: "Playboi Carti",
+      oga: "https://files.catbox.moe/cotdud.ogg",
+      poster: "https://upload.wikimedia.org/wikipedia/commons/7/7b/I_Am_Music_by_Playboi_Carti.jpg"
+    },
+    {
       title: "Jim Carrey",
       artist: "Destroy Lonely",
       oga: "https://files.catbox.moe/69jfcu.ogg",
