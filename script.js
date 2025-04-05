@@ -181,10 +181,10 @@ $(document).ready(function () {
       poster: "https://pbs.twimg.com/media/Fjf6EqcWQAAsYy1.jpg"
     },
     {
-      title: "For You",
+      title: "THX",
       artist: "Ken Carson",
       oga: "https://files.catbox.moe/h43ovr.ogg",
-      poster: "https://i1.sndcdn.com/artworks-tI7JTsxh0VFDyp71-YGJFgQ-t500x500.jpg"
+      poster: "https://upload.wikimedia.org/wikipedia/en/2/26/Ken_Carson_-_More_Chaos.jpg"
     },
     {
       title: "U Kan Do It Too",
@@ -196,7 +196,7 @@ $(document).ready(function () {
       title: "Kryptonite",
       artist: "Ken Carson",
       oga: "https://files.catbox.moe/l6xlke.ogg",
-      poster: "https://i1.sndcdn.com/artworks-NUx3wqNsA9aEFy2I-zSRYWg-t500x500.png"
+      poster: "https://upload.wikimedia.org/wikipedia/en/2/26/Ken_Carson_-_More_Chaos.jpg"
     },
     {
       title: "MUNYUN",
