@@ -245,6 +245,18 @@ $(document).ready(function () {
       artist: "Ken Carson",
       oga: "https://files.catbox.moe/iadj4c.ogg",
       poster: "https://upload.wikimedia.org/wikipedia/en/f/f5/Ken_Carson_-_A_Great_Chaos.jpg"
+    },
+    {
+      title: "Proud Family",
+      artist: "Ken Carson",
+      oga: "https://files.catbox.moe/yw3r6u.ogg",
+      poster: "https://upload.wikimedia.org/wikipedia/en/2/26/Ken_Carson_-_More_Chaos.jpg"
+    },
+    {
+      title: "Dismantled",
+      artist: "Ken Carson",
+      oga: "https://files.catbox.moe/a0m3dk.ogg",
+      poster: "https://upload.wikimedia.org/wikipedia/en/2/26/Ken_Carson_-_More_Chaos.jpg"
     }
   ];
 
