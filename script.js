@@ -257,6 +257,18 @@ $(document).ready(function () {
       artist: "Ken Carson",
       oga: "https://files.catbox.moe/a0m3dk.ogg",
       poster: "https://upload.wikimedia.org/wikipedia/en/2/26/Ken_Carson_-_More_Chaos.jpg"
+    },
+    {
+      title: "Room 156",
+      artist: "OsamaSon",
+      oga: "https://files.catbox.moe/pnvf7e.ogg",
+      poster: "https://upload.wikimedia.org/wikipedia/en/9/9e/Jump_Out_%28album%29.jpg"
+    },
+    {
+      title: "Going Dumbo",
+      artist: "OsamaSon",
+      oga: "https://files.catbox.moe/df3ay0.ogg",
+      poster: "https://upload.wikimedia.org/wikipedia/en/9/9e/Jump_Out_%28album%29.jpg"
     }
   ];
 
