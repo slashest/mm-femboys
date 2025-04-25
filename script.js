@@ -269,7 +269,7 @@ $(document).ready(function () {
       artist: "OsamaSon",
       oga: "https://files.catbox.moe/df3ay0.ogg",
       poster: "https://upload.wikimedia.org/wikipedia/en/9/9e/Jump_Out_%28album%29.jpg"
-    }
+    },
     {
       title: "DANGEROUS",
       artist: "Destroy Lonely",
