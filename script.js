@@ -270,6 +270,12 @@ $(document).ready(function () {
       oga: "https://files.catbox.moe/df3ay0.ogg",
       poster: "https://upload.wikimedia.org/wikipedia/en/9/9e/Jump_Out_%28album%29.jpg"
     }
+    {
+      title: "DANGEROUS",
+      artist: "Destroy Lonely",
+      oga: "https://files.catbox.moe/gvvrm4.ogg",
+      poster: "https://images.genius.com/58faeaff2ae9c122d896cc8156535b7d.1000x1000x1.png"
+    }
   ];
 
   function preloadNextTrack(index) {
