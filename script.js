@@ -275,6 +275,12 @@ $(document).ready(function () {
       artist: "Destroy Lonely",
       oga: "https://files.catbox.moe/gvvrm4.ogg",
       poster: "https://images.genius.com/58faeaff2ae9c122d896cc8156535b7d.1000x1000x1.png"
+    },
+    {
+      title: "WAR 2",
+      artist: "Yeat",
+      oga: "https://files.catbox.moe/2t7c3u.ogg",
+      poster: "https://files.catbox.moe/65v7mp.png"
     }
   ];
 
