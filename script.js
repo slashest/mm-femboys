@@ -1,12 +1,6 @@
 $(document).ready(function () {
   var playlist = [
     {
-      title: "goyard",
-      artist: "Nettspend",
-      oga: "https://files.catbox.moe/7wgef3.ogg",
-      poster: "https://files.catbox.moe/k0atg7.png"
-    },
-    {
       title: "BACK THËN",
       artist: "Yeat",
       oga: "https://files.catbox.moe/q7nauy.ogg",
@@ -23,12 +17,6 @@ $(document).ready(function () {
       artist: "Playboi Carti, Lil Uzi Vert",
       oga: "https://files.catbox.moe/o7dy8b.ogg",
       poster: "https://lastfm.freetls.fastly.net/i/u/770x0/7b6ea4c1882d87e5c149bbaea8b8801e.jpg#7b6ea4c1882d87e5c149bbaea8b8801e"
-    },
-    {
-      title: "hop out the car hop out the car",
-      artist: "heroinsick",
-      oga: "https://files.catbox.moe/df4kn9.ogg",
-      poster: "https://t2.genius.com/unsafe/425x425/https%3A%2F%2Fimages.genius.com%2F61682c05be89f68e70db4ad53d63f9bd.500x500x1.jpg"
     },
     {
       title: "Vetement Jeans",
