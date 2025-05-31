@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ixi</title>
+    <title>ix</title>
     <link rel="icon" type="image/png" href="Catboys.png">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap" rel="stylesheet">
     <style>
         html {
             height: 100%;
         }
-
         body {
             height: 100%;
             margin: 0;
             overflow: hidden;
-            background-color: #111119;
+            background-color: #111119; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
         }
-
         .rain {
             position: absolute;
             left: 0;
@@ -24,7 +28,6 @@
             height: 100%;
             z-index: 1;
         }
-
         .drop {
             position: absolute;
             bottom: 100%;
@@ -33,19 +36,11 @@
             pointer-events: none;
             animation: drop 0.5s linear infinite;
         }
-
         @keyframes drop {
-            0% {
-                transform: translateY(0vh);
-            }
-            75% {
-                transform: translateY(90vh);
-            }
-            100% {
-                transform: translateY(90vh);
-            }
+            0% { transform: translateY(0vh); }
+            75% { transform: translateY(90vh); }
+            100% { transform: translateY(90vh); }
         }
-
         .stem {
             width: 1px;
             height: 60%;
@@ -53,14 +48,12 @@
             background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.25));
             animation: stem 0.5s linear infinite;
         }
-
         @keyframes stem {
             0% { opacity: 1; }
             65% { opacity: 1; }
             75% { opacity: 0; }
             100% { opacity: 0; }
         }
-
         .splat {
             width: 15px;
             height: 10px;
@@ -70,27 +63,145 @@
             transform: scale(0);
             animation: splat 0.5s linear infinite;
         }
-
         @keyframes splat {
             0% { opacity: 1; transform: scale(0); }
             80% { opacity: 1; transform: scale(0); }
             90% { opacity: 0.5; transform: scale(1); }
             100% { opacity: 0; transform: scale(1.5); }
         }
+
+        /* Profile Styles */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+        .profile-overlay {
+            position: relative;
+            text-align: center;
+            color: #D8D8D8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        img.profile {
+            width: 125px;
+            height: 125px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        .username {
+            color: #D8D8D8;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 0px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .username:hover {
+            color: #9C9C9C;
+        }
+        .handle, .telegram {
+            color: #787878;
+            font-size: 20px;
+            font-weight: 500;
+            margin-top: 3px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .handle:hover, .telegram:hover {
+            color: #454545;
+        }
+        .music-player {
+            position: relative;
+            width: 350px;
+            height: 290px;
+            box-shadow: 0 0 60px rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            background: #222;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .info {
+            width: 100%;
+            height: 100px;
+            background: rgba(0,0,0,0.8);
+            text-align: center;
+            position: relative;
+        }
+        .progress, .volume-level {
+            width: 100%;
+            height: 5px;
+            display: block;
+            background: #000;
+            position: absolute;
+            bottom: 0;
+            cursor: pointer;
+            border: none;
+        }
+        .controls {
+            text-align: center;
+            width: 100%;
+            height: 190px;
+            background: rgba(255, 255, 255, 0.1);
+        }
     </style>
 </head>
 <body class="back-row-toggle splat-toggle">
     <div class="rain front-row"></div>
     <div class="rain back-row"></div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <div class="container">
+        <div class="profile-overlay">
+            <img id="profile-pic" class="profile" src="" alt="Profile Picture" />
+            <a id="discord-user" href="https://discord.com/users/1250093055457886209"  class="username" target="_blank">Loading...</a>
+            <a id="discord-handle" href="https://discord.com/users/1250093055457886209"  class="handle" target="_blank">@Loading...</a>
+            <a href="https://t.me/slashest"  class="telegram" target="_blank">t.me/slashest</a>
+        </div>
+        <div class="music-player">
+            <div class="info">
+                <div class="center">
+                    <div class="jp-playlist">
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </div> 
+                </div>
+                <div class="progress"></div>
+            </div>
+            <div class="controls">
+                <div class="current jp-current-time">00:00</div>
+                <div class="play-controls">
+                    <a href="javascript:;" class="icon-previous jp-previous" title="Previous Song"></a>
+                    <a href="javascript:;" class="icon-play jp-play" title="Play"></a>
+                    <a href="javascript:;" class="icon-pause jp-pause" title="Pause"></a>
+                    <a href="javascript:;" class="icon-next jp-next" title="Next Song"></a>
+                </div>
+                <div class="volume-level">
+                    <a href="javascript:;" class="icon-volume-up" title="Max"></a>
+                    <a href="javascript:;" class="icon-volume-down" title="Mute"></a>
+                </div>
+            </div>
+            <div id="jquery_jplayer" class="jp-jplayer"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.6.4/jquery.jplayer/jquery.jplayer.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.6.4/add-on/jplayer.playlist.min.js"></script> 
+
     <script>
         var makeItRain = function() {
             $('.rain').empty();
-
             var increment = 0;
             var drops = "";
             var backDrops = "";
-
             while (increment < 100) {
                 var randoHundo = (Math.floor(Math.random() * (98 - 1 + 1) + 1));
                 var randoFiver = (Math.floor(Math.random() * (5 - 2 + 1) + 2));
@@ -98,7 +209,6 @@
                 drops += '<div class="drop" style="left: ' + increment + '%; bottom: ' + (randoFiver + randoFiver - 1 + 100) + '%; animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"><div class="stem" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div><div class="splat" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div></div>';
                 backDrops += '<div class="drop" style="right: ' + increment + '%; bottom: ' + (randoFiver + randoFiver - 1 + 100) + '%; animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"><div class="stem" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div><div class="splat" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div></div>';
             }
-
             $('.rain.front-row').append(drops);
             $('.rain.back-row').append(backDrops);
         }
@@ -122,166 +232,39 @@
         });
 
         makeItRain();
+
+        const userId = "1250093055457886209";
+        const apiUrl = `https://api.lanyard.rest/v1/users/${userId}`; 
+
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                if (data && data.success) {
+                    const user = data.data;
+
+                    const usernameElement = document.getElementById("discord-user");
+                    usernameElement.textContent = user.global_name || "Discord User";
+                    usernameElement.href = `https://discord.com/users/${userId}`; 
+                    usernameElement.setAttribute('target', '_blank');
+
+                    const handleElement = document.getElementById("discord-handle");
+                    handleElement.textContent = `@${user.username}`;
+                    handleElement.href = `https://discord.com/users/${userId}`; 
+                    handleElement.setAttribute('target', '_blank');
+
+                    const profilePic = document.getElementById("profile-pic");
+                    if (user.avatar) {
+                        profilePic.src = `https://cdn.discordapp.com/avatars/${userId}/${user.avatar}.png?size=1024`;
+                    } else {
+                        profilePic.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSieyaZb-hSOtWnc6wha3QQlMLL8_cfvr2WIQ&s";
+                    }
+                } else {
+                    console.error("Failed to fetch user data.");
+                }
+            })
+            .catch(error => {
+                console.error("Error fetching user data:", error);
+            });
     </script>
-</body>
-</html>
-
-
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ix</title>
-    <link rel="icon" type="image/png" href="https://e.snmc.io/i/300/s/6810e8d10d6a0fc63d3fe73c935eb8da/9325720/TwizzyRich%2C%20Label%20logo.jpeg" />
-    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: #111119;
-            position: relative;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        .profile-overlay {
-            position: relative;
-            text-align: center;
-            color: #D8D8D8;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 20px;
-            z-index: 2;
-        }
-
-        img.profile {
-            width: 125px;
-            height: 125px;
-            border-radius: 50%;
-            margin-bottom: 15px;
-        }
-
-        .username {
-            color: #D8D8D8;
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 0px;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .username:hover {
-            color: #9C9C9C;
-        }
-
-        .handle, .telegram {
-            color: #787878;
-            font-size: 20px;
-            font-weight: 500;
-            margin-top: 3px;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .handle:hover, .telegram:hover {
-            color: #454545;
-        }
-
-        .music-player {
-            position: relative;
-            width: 350px;
-            height: 290px;
-            box-shadow: 0 0 60px rgba(0, 0, 0, 0.8);
-            border-radius: 10px;
-            background: #222;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .info {
-            width: 100%;
-            height: 100px;
-            background: rgba(0,0,0,0.8);
-            text-align: center;
-            position: relative;
-        }
-
-        .progress, .volume-level {
-            width: 100%;
-            height: 5px;
-            display: block;
-            background: #000;
-            position: absolute;
-            bottom: 0;
-            cursor: pointer;
-            border: none;
-        }
-
-        .controls {
-            text-align: center;
-            width: 100%;
-            height: 190px;
-            background: rgba(255, 255, 255, 0.1);
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="profile-overlay">
-            <img class="profile" src="https://i.scdn.co/image/ab67616d00001e022f809ce10bda1a70d5613cfc" alt="Profile Picture" />
-            <a href="https://discord.com/users/1250093055457886209" class="username" target="_blank">James</a>
-            <a href="https://discord.com/users/1250093055457886209" class="handle" target="_blank">@parkwaygardenhomes</a>
-            <a href="https://t.me/slashest" class="telegram" target="_blank">t.me/slashest</a>
-        </div>
-
-        <div class="music-player">
-            <div class="info">
-                <div class="center">
-                    <div class="jp-playlist">
-                        <ul>
-                            <li></li>
-                        </ul>
-                    </div> 
-                </div>
-                <div class="progress"></div>
-            </div>
-            
-            <div class="controls">
-                <div class="current jp-current-time">00:00</div>
-                <div class="play-controls">
-                    <a href="javascript:;" class="icon-previous jp-previous" title="Previous Song"></a>
-                    <a href="javascript:;" class="icon-play jp-play" title="Play"></a>
-                    <a href="javascript:;" class="icon-pause jp-pause" title="Pause"></a>
-                    <a href="javascript:;" class="icon-next jp-next" title="Next Song"></a>
-                </div>
-                <div class="volume-level">
-                    <a href="javascript:;" class="icon-volume-up" title="Max"></a>
-                    <a href="javascript:;" class="icon-volume-down" title="Mute"></a>
-                </div>
-            </div>
-            
-            <div id="jquery_jplayer" class="jp-jplayer"></div>
-        </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.6.4/jquery.jplayer/jquery.jplayer.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.6.4/add-on/jplayer.playlist.min.js"></script>
-    <script src="script.js"></script>    
 </body>
 </html>
