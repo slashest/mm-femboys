@@ -265,6 +265,12 @@ $(document).ready(function () {
       poster: "https://images.genius.com/58faeaff2ae9c122d896cc8156535b7d.1000x1000x1.png"
     },
     {
+      title: "TALKING SHIT / HOLD IT UP",
+      artist: "Yeat",
+      oga: "https://files.catbox.moe/up0vfm.ogg",
+      poster: "https://files.catbox.moe/gpb59u.png"
+    },
+    {
       title: "WAR 2",
       artist: "Yeat",
       oga: "https://files.catbox.moe/2t7c3u.ogg",
