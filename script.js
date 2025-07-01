@@ -275,6 +275,12 @@ $(document).ready(function () {
       artist: "Yeat",
       oga: "https://files.catbox.moe/2t7c3u.ogg",
       poster: "https://files.catbox.moe/65v7mp.png"
+    },
+    {
+      title: "XY",
+      artist: "Feng",
+      oga: "https://files.catbox.moe/mfhum8.ogg",
+      poster: "https://i.scdn.co/image/ab67616d0000b273e9b4b33ac93a78e8e504c641"
     }
   ];
 
